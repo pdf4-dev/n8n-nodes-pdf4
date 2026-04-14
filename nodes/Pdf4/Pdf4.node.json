@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-pdf4.pdf4",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Marketing", "Utility"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://docs.pdf4.dev/authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/pdf4/n8n-nodes-pdf4?tab=readme-ov-file"
+			}
+		]
+	}
+}

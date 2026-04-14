@@ -1,0 +1,66 @@
+{
+	"name": "n8n-nodes-pdf4",
+	"version": "0.1.0",
+	"description": "n8n community node for PDF4.dev — generate PDFs from HTML templates via the PDF4.dev REST API.",
+	"license": "MIT",
+	"homepage": "https://pdf4.dev",
+	"keywords": [
+		"n8n-community-node-package",
+		"pdf",
+		"pdf-generation",
+		"html-to-pdf",
+		"pdf4",
+		"pdf4.dev",
+		"invoice",
+		"template",
+		"handlebars"
+	],
+	"author": {
+		"name": "PDF4.dev",
+		"email": "hello@pdf4.dev",
+		"url": "https://pdf4.dev"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pdf4/n8n-nodes-pdf4.git"
+	},
+	"bugs": {
+		"url": "https://github.com/pdf4/n8n-nodes-pdf4/issues"
+	},
+	"engines": {
+		"node": ">=20.15"
+	},
+	"main": "index.js",
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/Pdf4Api.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Pdf4/Pdf4.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.39.4",
+		"prettier": "3.8.1",
+		"release-it": "19.2.4",
+		"typescript": "5.9.3"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
