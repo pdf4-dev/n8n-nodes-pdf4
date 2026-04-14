@@ -1,5 +1,6 @@
 import type {
 	IAuthenticateGeneric,
+	Icon,
 	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
@@ -9,6 +10,8 @@ export class Pdf4Api implements ICredentialType {
 	name = 'pdf4Api';
 
 	displayName = 'PDF4.dev API';
+
+	icon: Icon = { light: 'file:../nodes/Pdf4/pdf4.svg', dark: 'file:../nodes/Pdf4/pdf4.dark.svg' };
 
 	documentationUrl = 'https://docs.pdf4.dev/authentication';
 

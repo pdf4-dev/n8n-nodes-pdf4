@@ -1,9 +1,10 @@
 import type {
+	IDataObject,
 	IExecuteFunctions,
+	IHttpRequestOptions,
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-	IHttpRequestOptions,
 } from 'n8n-workflow';
 import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
 
@@ -192,10 +193,10 @@ export class Pdf4 implements INodeType {
 						options: [
 							{ name: 'A4', value: 'a4' },
 							{ name: 'A4 Landscape', value: 'a4-landscape' },
+							{ name: 'Custom', value: 'custom' },
 							{ name: 'Letter', value: 'letter' },
 							{ name: 'Letter Landscape', value: 'letter-landscape' },
 							{ name: 'Square', value: 'square' },
-							{ name: 'Custom', value: 'custom' },
 						],
 						default: 'a4',
 					},
@@ -299,8 +300,10 @@ export class Pdf4 implements INodeType {
 							url: `${baseUrl}/api/v1/templates`,
 							json: true,
 						});
-						const list = Array.isArray(response) ? response : (response as { data?: unknown[] }).data ?? [];
-						for (const tmpl of list as Array<Record<string, unknown>>) {
+						const list = Array.isArray(response)
+							? (response as IDataObject[])
+							: ((response as { data?: IDataObject[] }).data ?? []);
+						for (const tmpl of list) {
 							returnData.push({ json: tmpl, pairedItem: { item: i } });
 						}
 						continue;
@@ -312,7 +315,7 @@ export class Pdf4 implements INodeType {
 							url: `${baseUrl}/api/v1/templates/${encodeURIComponent(templateId)}`,
 							json: true,
 						});
-						returnData.push({ json: response as Record<string, unknown>, pairedItem: { item: i } });
+						returnData.push({ json: response as IDataObject, pairedItem: { item: i } });
 						continue;
 					}
 				}
