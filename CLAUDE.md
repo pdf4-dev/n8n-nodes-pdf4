@@ -102,7 +102,7 @@ This package uses **npm provenance** (mandatory for verified community nodes fro
 
 1. Go to npmjs.com → package settings (after first manual publish or after reserving the name)
 2. Publish access → Trusted Publishers → Add a publisher → GitHub Actions
-3. Fill in: `pdf4/n8n-nodes-pdf4`, workflow `publish.yml`
+3. Fill in: `pdf4-dev/n8n-nodes-pdf4`, workflow `publish.yml`
 4. Add `NPM_TOKEN` as a repo secret (classic automation token is fine as a fallback, but Trusted Publishers is preferred)
 
 ### Release flow
@@ -165,7 +165,7 @@ Follow the same rules as pdf4.dev (CLAUDE.md of the main repo):
 
 ## Related
 
-- **Main product repo**: [PDF4.dev](https://github.com/pdf4/pdf4.dev) (private)
+- **Main product repo**: [PDF4.dev](https://github.com/pdf4-dev/pdf4.dev) (private)
 - **Docs**: https://docs.pdf4.dev
 - **Dashboard**: https://pdf4.dev/dashboard
 - **Competitor reference** (for parity checks only): [n8n-nodes-templatefox](https://github.com/TemplateFoxPDF/n8n-nodes-templatefox)

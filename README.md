@@ -73,7 +73,7 @@ Use **Render From HTML** when you want to ship a one-off PDF without creating a 
 - [PDF4.dev docs](https://docs.pdf4.dev)
 - [PDF4.dev dashboard](https://pdf4.dev/dashboard)
 - [n8n community nodes docs](https://docs.n8n.io/integrations/community-nodes/)
-- [Report an issue](https://github.com/pdf4/n8n-nodes-pdf4/issues)
+- [Report an issue](https://github.com/pdf4-dev/n8n-nodes-pdf4/issues)
 
 ## License
 
